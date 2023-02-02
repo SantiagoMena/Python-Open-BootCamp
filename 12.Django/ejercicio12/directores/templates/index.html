@@ -1,0 +1,9 @@
+{% extends "basic_generic.html" %}
+{%block content %}
+{% for item in data %}
+    Director: {{item.nombre}}<br>
+    {% for pelicula in item.peliculas %}
+        - {{ pelicula.title }} <br>
+    {% endfor %}
+{% endfor %}
+{% endblock %}
